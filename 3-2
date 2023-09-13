@@ -1,0 +1,4 @@
+DROP TABLE Products;
+CREATE TABLE Products
+(name VARCHAR(16) NOT NULL,
+ price INTEGER NOT NULL);
