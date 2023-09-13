@@ -1,0 +1,2 @@
+COALESCE(x, 1)とかくとx列にあるNULLが1に変更される
+NULIF(x, 1)とかくとx列にあるNULLが1に変更される
