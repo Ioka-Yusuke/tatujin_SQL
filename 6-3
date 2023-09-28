@@ -1,0 +1,4 @@
+SELECT SI.shop, COUNT(I.item), (SELECT COUNT(item) FROM Items)-COUNT(SI.item)
+FROM ShopItems SI INNER JOIN Items I
+ON SI.item = I.item
+GROUP BY SI.shop;
