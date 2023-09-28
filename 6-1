@@ -1,0 +1,4 @@
+SELECT
+CASE WHEN COUNT(*) = MAX(seq) - MIN(seq) + 1 THEN '○'
+     ELSE '×' END
+FROM SeqTbl;
