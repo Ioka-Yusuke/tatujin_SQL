@@ -1,0 +1,5 @@
+SELECT employee,
+  (CASE WHEN child_1 IS NULL THEN 0 ELSE 1 END) + 
+  (CASE WHEN child_2 IS NULL THEN 0 ELSE 1 END) + 
+  (CASE WHEN child_3 IS NULL THEN 0 ELSE 1 END) AS total_children
+FROM Personnel;
