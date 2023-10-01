@@ -1,0 +1,16 @@
+SELECT *
+FROM (
+  
+(SELECT emp, COUNT(*) AS CNT
+FROM EmpSkills ES INNER JOIN Skills S
+ON ES.skill = S.skill
+GROUP BY emp)
+  
+INTERSECT
+  
+(SELECT emp, COUNT(*) AS ALL_CNT
+FROM EmpSkills
+GROUP BY emp)
+) TMP
+
+WHERE CNT = 3;
