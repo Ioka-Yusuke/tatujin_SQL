@@ -1,0 +1,3 @@
+SELECT *
+FROM Seats S1, Seats S2, Seats S3
+WHERE S2.seat = S1.seat+1 AND S3.seat = S2.seat+1 AND S1.status = '空' AND S2.status = '空' AND S3.status = '空';
