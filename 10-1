@@ -1,0 +1,15 @@
+-- NOT EXISTS
+SELECT seq
+FROM Sequence
+WHERE seq BETWEEN 1 AND 12
+AND NOT EXISTS (
+  SELECT seq
+  FROM SeqTbl
+);
+
+--外部結合
+SELECT Sequence.seq
+FROM Sequence
+LEFT OUTER JOIN SeqTbl ON Sequence.seq = SeqTbl.seq
+WHERE Sequence.seq BETWEEN 1 AND 12
+AND SeqTbl.seq IS NULL;
